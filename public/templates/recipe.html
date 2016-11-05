@@ -1,0 +1,10 @@
+<div ng-repeat="recipe in recipeArray">
+    <label>{{recipe.name}}</label>
+    <div ng-repeat="ingrediente in recipe.ingredientes">
+        <label>{{ingrediente.ingredient}}</label>
+        <label>{{ingrediente.amount}}</label>
+    </div>
+    <div ng-repeat="direction in recipe.directions">
+        <label>{{direction.direction}}</label>
+    </div>
+</div>

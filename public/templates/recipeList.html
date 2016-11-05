@@ -1,0 +1,13 @@
+<div>
+    
+    <h1>Recipe List</h1>
+
+    <div>
+        <a href="#/NewRecipe">
+            Add A New Recipe!</a>
+    </div>
+
+    <div ng-repeat="recipe in recipes">
+        <span ng-click="go(recipe)">{{recipe.name}}</span>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" type="text/css" href="/styles/navbar-fixed-top.css">
+    <link rel="stylesheet" type="text/css" href="/styles/app.css">
+</head>
+<body ng-controller="MainCtrl">
+    <div ng-include="'templates/navbar.html'"></div>
+    
+    <div class="container" ng-view></div>
+    
+
+    <script src="/jquery/jquery.js"></script>
+    <script src="/scripts/vendor.bundle.js"></script>
+    <script src="/scripts/app.bundle.js"></script>
+    
+    <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="/scripts/siteJS.js"></script>
+
+</body>
+</html>
