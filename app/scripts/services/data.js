@@ -12,17 +12,6 @@ function DataService ($http) {
         .then(callback);
     }
 
-    /*
-    this.getRecipe = function (id){
-        $http.get('/api/recipe/' + id)
-        .then(function(result){
-            recipe = result.data.recipe;
-            return recipe;
-        });
-    };
-    */
-    
-
     this.deleteRecipe = function(recipe) {
         if (!recipe._id) {
             return $q.resolve();
@@ -44,7 +33,7 @@ function DataService ($http) {
         
         $http.put('/api/recipe/' + recipe._id, recipe)
         .then(function (result) {
-            todo = result.data.recipe;
+            recipe = result.data.recipe;
             console.log('Updated recipe!')
             return recipe;
         });

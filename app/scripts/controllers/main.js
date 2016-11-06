@@ -2,19 +2,19 @@
 
 
 
-function MainCtrl($scope, $log, DataService) {
+function MainCtrl($scope, DataService, $location) {
     $scope.navItems = [
         {'title': 'Home', 'path': '#/'},
         {'title': 'Recipe List', 'path': '#/RecipeList'}
     ]
-    $scope.activeNav = 'Home'
+    $scope.activeNav = '#'+$location.url();
     
     $scope.isActive = function(title){
         return $scope.activeNav === title;
     }
 
-    $scope.toggle = function(title){
-        $scope.activeNav = title;
+    $scope.toggle = function(path){
+        $scope.activeNav = path;
     };
 
     $scope.activate = function(element){

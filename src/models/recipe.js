@@ -2,12 +2,12 @@
 
 var mongoose = require('mongoose');
 
-var IngredienteSchema = new mongoose.Schema({ingredient: String, amount: Number})
+var IngredientSchema = new mongoose.Schema({ingredient: String, amount: Number})
 var RecipeDirectionSchema = new mongoose.Schema({direction: String});
 
 var RecipeSchema = new mongoose.Schema({
     name: String,
-    ingredientes: [IngredienteSchema],
+    ingredients: [IngredientSchema],
     directions: [RecipeDirectionSchema]
 });
 
