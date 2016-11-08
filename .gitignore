@@ -48,3 +48,5 @@ Temporary Items
 
 
 node_modules
+app.bundle.js
+vendor.bundle.js
