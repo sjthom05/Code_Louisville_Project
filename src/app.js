@@ -9,6 +9,9 @@ var app = express();
 //Connect to the database
 require('./database');
 
+//seed the database
+require('../mock/seed.js')
+
 //serve the static files
 app.use(parser.json());
 app.use('/', express.static('public'));

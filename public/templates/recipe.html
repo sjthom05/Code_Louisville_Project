@@ -5,24 +5,24 @@
     <h3>Ingredients</h3>
     <a href="" ng-click="addIngredient()" ng-show="editing">Add Ingredient</a>
     <div ng-repeat="ingredient in recipe.ingredients">
-        <label ng-hide="editing">{{ingredient.ingredient}}</label> 
+        <span ng-hide="editing">{{ingredient.ingredient}}</span> 
         <input type="text" ng-show="editing" ng-model="ingredient.ingredient">
-
-        <label ng-hide="editing">{{ingredient.amount}}</label> 
-        <input type="text" ng-show="editing" ng-model="ingredient.amount">
         <input type="button" value="Delete" ng-click="deleteIngredient($index)" ng-show="editing">
     </div>
 
     <h3>Directions</h3>
     <a href="" ng-click="addDirection()" ng-show="editing">Add Direction</a>
-    <div ng-repeat="direction in recipe.directions">
-        <label ng-hide="editing">{{direction.direction}}</label>
-        <input type="text" ng-show="editing" ng-model="direction.direction">
-        <input type="button" value="Delete" ng-click="deleteDirection($index)" ng-show="editing">
-    </div>
+    <ol>
+        <li ng-repeat="direction in recipe.directions">
+                <p ng-hide="editing">{{direction.direction}}</p>
+                <input type="text" ng-show="editing" ng-model="direction.direction">
+                <input type="button" value="Delete" ng-click="deleteDirection($index)" ng-show="editing">
+        </li>
+    </ol>
 
     <div>
-        <input type="button" value="Edit" ng-click="editing = true">
+        <input type="button" value="Edit" ng-click="editing = true" ng-hide="editing">
+        <input type="button" value="Cancel" ng-click="editing = false" ng-show="editing">
         <input type="button" value="Save" ng-click="saveRecipe()">
     </div>
 </div>
