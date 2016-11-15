@@ -1,4 +1,8 @@
 <div>
+    <div>
+        <a href="#/RecipeList" ng-hide="editing">Back</a>
+    </div>
+
     <h1 ng-hide="editing">{{recipe.name}}</h1>
     <input ng-show="editing" ng-model="recipe.name" type="text">
     
