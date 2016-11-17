@@ -16,10 +16,10 @@ function DataService ($http) {
         if (!recipe._id) {
             return $q.resolve();
         }
-        return $http.delete('/api/recipe' + recipe._id)
+        return $http.delete('/api/recipe/' + recipe._id)
         .then(function() {
             console.log('I deleted the ' + recipe.name + " recipe!");
-            this.getRecipes();
+            //this.getRecipes();
         });
     };
 

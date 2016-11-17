@@ -3,12 +3,13 @@
     <h1>Recipe List</h1>
 
     <div>
-        <a href="#/NewRecipe">
-            Add A New Recipe!</a>
+        <a class="btn btn-default button-box" href="#/NewRecipe">Add A New Recipe!</a>
     </div>
     
-        <div ng-repeat="recipe in recipes">
-            <span ng-click="go(recipe)">{{recipe.name}}</span>
+        <div id="recipe-list">
+            <div ng-repeat="recipe in recipes">
+                <span ng-click="go(recipe)">{{recipe.name}}</span>
+            </div>
         </div>
     </div>
     

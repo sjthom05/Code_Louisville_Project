@@ -1,4 +1,4 @@
-
+/*
 (function() {
 $('#navbar a').click(function(){
     $('#navbar li').removeClass('active');
@@ -6,5 +6,4 @@ $('#navbar a').click(function(){
     console.log('test test');
 });
 })();
-
-console.log('test')
+*/

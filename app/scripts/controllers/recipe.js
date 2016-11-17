@@ -1,8 +1,8 @@
 'use strict'
 
-RecipeCtrl.$inject = ['$scope', '$routeParams', 'DataService']
+RecipeCtrl.$inject = ['$scope', '$routeParams', 'DataService', '$location']
 
-function RecipeCtrl($scope, $routeParams, DataService) {
+function RecipeCtrl($scope, $routeParams, DataService, $location) {
 
     $scope.recipeId = $routeParams.recipeId;
 
@@ -42,7 +42,11 @@ function RecipeCtrl($scope, $routeParams, DataService) {
         $scope.editing = false;
 
         DataService.saveRecipe($scope.recipe);
+    };
 
+    $scope.deleteRecipe = function() {
+        DataService.deleteRecipe($scope.recipe)
+        $location.path('/RecipeList');
     };
 };
 
